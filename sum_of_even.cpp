@@ -1,17 +1,12 @@
 #include <iostream>
 using namespace std;
-int isEven(int);
+int sumEven(int);
 int main()
 {
     int num;
-    cout << "Sum of how many even numbers do you want: ";
+    cout << "Print sum of even numbers till: ";
     cin >> num;
-    cout << "Total sum of " << num << "even numbers is " << isEven(num);
 
-    return 0;
-}
-int isEven(int num)
-{
     int evenCount = 0;
     int sumOfEvens = 0;
     for (int i = 0; i < num; i++)
@@ -20,5 +15,8 @@ int isEven(int num)
             evenCount++;
         sumOfEvens += evenCount;
     }
-    return sumOfEvens;
+    cout << "Sum of even numbers from 1 to " << num << " is " << sumOfEvens << endl;
+    cout << "Aveage of even numbers from 1 to "<< num <<" is "<< (sumOfEvens / evenCount)<<endl;
+
+    return 0;
 }
